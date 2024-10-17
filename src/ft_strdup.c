@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 12:23:48 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/17 11:46:32 by tobesnar         ###   ########.fr       */
+/*   Created: 2024/10/17 13:27:16 by tobesnar          #+#    #+#             */
+/*   Updated: 2024/10/17 13:27:35 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(char c)
+char	*ft_strdup(char *src)
 {
-	return (c >= 0 && c < 127);
-}
+	char	*result;
+	int		i;
 
-/*int main()
-{
-	printf("%i\n", ft_isascii('Z'));
-	printf("%i\n", ft_isascii('0'));
-	return 0;
-}*/
+	i = 0;
+	result = (char *)(malloc(sizeof(char) * ft_strlen(src)));
+	while (src[i])
+	{
+		result[i] = src[i];
+		i++;
+	}
+	if (result != NULL)
+	{
+		result[i] = '\0';
+		return (result);
+	}
+	else
+		return (0);
+}

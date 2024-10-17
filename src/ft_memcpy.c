@@ -6,13 +6,13 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:33:55 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/16 12:10:03 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/17 13:40:35 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*ptr;
 	unsigned char	*dst;
