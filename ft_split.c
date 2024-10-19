@@ -6,7 +6,7 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 13:24:10 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/19 15:29:44 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/19 16:37:57 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	**ft_split(char const *s, char sep)
 		if (s[i] != sep && (i == 0 || s[i - 1] == sep))
 			start = i;
 		if (s[i] != sep && (s[i + 1] == sep || s[1 + i] == 0))
-			split[word_index++] == malloc_word(s, start, i + 1);
+			split[word_index++] = malloc_word(s, start, i + 1);
 		i++;
 	}
 	split[word_index] = NULL;
