@@ -26,22 +26,22 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra -I ./
 
 .c.o:
-        ${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-${LIB}:    ${OBJS}
-        ar -rsc ${LIB} ${OBJS}
+${LIB}:	${OBJS}
+		ar -rsc ${LIB} ${OBJS}
 
-bonus:    ${OBJSALL}
-        ar -rsc ${LIB} ${OBJSALL}
+bonus:	${OBJSALL}
+		ar -rsc ${LIB} ${OBJSALL}
 
-all:     ${LIB}
+all:	${LIB}
 
 clean:
-        rm -f ${OBJSALL}
+		rm -f ${OBJSALL}
 
 fclean:    clean;
-        rm -f ${LIB}
+		rm -f ${LIB}
 
-re:    fclean all
+re:	fclean all
 
 .PHONY: all clean fclean re bonus

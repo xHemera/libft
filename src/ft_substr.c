@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 23:48:27 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/17 17:48:41 by tobesnar         ###   ########.fr       */
+/*   Created: 2024/10/17 16:23:25 by tobesnar          #+#    #+#             */
+/*   Updated: 2024/10/17 17:41:43 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+static size_t	ft_whichmin(size_t a, size_t b)
 {
-	size_t	i;
+	if (b > a)
+		return (a);
+	return (b);
+}
 
-	i = 0;
-	if (!n)
-		return (0);
-	while (i + 1 < n && s1[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*dest;
+	size_t	srclen;
+
+	srclen = ft_strlen(s);
+	start = ft_whichmin(srclen, start);
+	len = ft_whichmin(srclen - start, len);
+	dest = malloc(len + 1);
+	if (dest)
+		ft_strlcpy(dest, s + start, len + 1);
+	return (dest);
 }

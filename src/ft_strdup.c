@@ -6,29 +6,20 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:27:16 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/17 13:27:35 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/17 14:32:47 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
+	size_t	len;
 	char	*result;
-	int		i;
 
-	i = 0;
-	result = (char *)(malloc(sizeof(char) * ft_strlen(src)));
-	while (src[i])
-	{
-		result[i] = src[i];
-		i++;
-	}
-	if (result != NULL)
-	{
-		result[i] = '\0';
-		return (result);
-	}
-	else
-		return (0);
+	len = ft_strlen(src);
+	result = malloc(len + 1);
+	if (result)
+		ft_strlcpy(result, src, len + 1);
+	return (result);
 }

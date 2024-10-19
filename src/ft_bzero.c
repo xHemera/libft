@@ -6,7 +6,7 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:08:04 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/17 11:47:29 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/17 13:59:37 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
 	while (n > 0)
 	{
-		*ptr++ = '\0';
+		*(t_byte *)s++ = 0;
 		n--;
 	}
 }

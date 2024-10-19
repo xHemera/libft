@@ -6,7 +6,7 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:04:51 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/16 15:24:50 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/17 13:58:39 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,13 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*ptr;
-	unsigned char	*find;
-	size_t			i;
+	size_t	i;
 
-	ptr = (unsigned char *)s;
-	find = (unsigned char *)c;
 	i = 0;
 	while (i < n)
 	{
-		if (ptr[i] == c)
-			return (ptr + i);
+		if (((t_byte *)s)[i] == (t_byte)c)
+			return ((void *)s + i);
 		i++;
 	}
 	return (NULL);
