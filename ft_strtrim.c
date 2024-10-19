@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/19 10:41:27 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/19 11:22:36 by tobesnar         ###   ########.fr       */
+/*   Created: 2024/10/19 11:20:22 by tobesnar          #+#    #+#             */
+/*   Updated: 2024/10/19 12:31:15 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	s1_len;
-	size_t	s2_len;
+	size_t	len;
 	char	*result;
 
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	result = malloc(s1_len + s2_len + 1);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	len = ft_strlen(s1);
+	while (len && ft_strchr(set, s1[len - 1]))
+		len--;
+	result = malloc(len + 1);
 	if (!result)
 		return (NULL);
-	ft_strlcpy(result, s1, s1_len + 1);
-	ft_strlcpy(result + s1_len, s2, s2_len + 1);
+	ft_strlcpy(result, s1, len + 1);
 	return (result);
 }
+
+// int main()
+// {
+// 	printf("%s", ft_strtrim("abcdba", "acb"));
+// 	return 0;
+// }
