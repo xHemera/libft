@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 11:25:55 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/19 18:20:18 by tobesnar         ###   ########.fr       */
+/*   Created: 2024/10/19 19:07:46 by tobesnar          #+#    #+#             */
+/*   Updated: 2024/10/19 19:35:54 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t elementCount, size_t elementSize)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*ptr;
+	size_t	i;
+	char	*result;
 
-	ptr = malloc(elementCount * elementSize);
-	if (ptr)
-		ft_bzero(ptr, (elementCount * elementSize));
-	return (ptr);
+	i = ft_strlen(s);
+	result = malloc(i + 1);
+	if (result)
+	{
+		result[i] = 0;
+		while (i--)
+			result[i] = (*f)(i, s[i]);
+	}
+	return (result);
 }

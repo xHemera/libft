@@ -6,13 +6,13 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:33:40 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/16 12:13:56 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/19 18:19:43 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

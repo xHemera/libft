@@ -6,7 +6,7 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 11:19:00 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/17 14:12:41 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/19 19:38:07 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,25 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
-
-/*int main( int argc, char * argv[] ) {
-    if ( argc == 1 ) {
-        printf( "Usage: %s intValue ...\n", argv[0] );
-        exit( EXIT_SUCCESS );
-    }
-
-    argc--;   argv++;
-
-    int sum = 0;
-
-    while ( argc != 0 ) {
-
-        sum += ft_atoi( *argv++ );
-        argc--;
-
-    }
-
-    printf( "La somme des valeurs saisies est de %d.\n", sum );
-
-    return EXIT_SUCCESS;
-}*/
