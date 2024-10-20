@@ -6,7 +6,7 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 11:52:24 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/19 19:39:07 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/20 15:40:05 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char sep);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 //COMPLEMENT
 
