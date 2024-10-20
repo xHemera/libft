@@ -6,7 +6,7 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:23:48 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/19 18:21:32 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/20 14:55:49 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isalnum(int c)
 		|| (c >= 'a' && c <= 'z')
 		|| (c >= 'A' && c <= 'Z'));
 }
-
-/*int main()
-{
-	printf("%i\n", ft_isalnum('Z'));
-	printf("%i\n", ft_isalnum('0'));
-	return 0;
-}*/

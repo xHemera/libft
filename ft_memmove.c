@@ -6,7 +6,7 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:10:38 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/17 14:15:22 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/20 14:56:17 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/* int main()
-{
-
-	printf("Test de ft_memmove() :\n");
-	printf("");
-	int		erreur = 0;
-	int		reussi = 0;
-	char dest[10] = "oldstring";
-	char src[10]  = "newstring";
-	char destn[] = "oldstring";
-	char srcn[]  = "newstring";
-	memmove(dest, src, 9);
-	ft_memmove(destn, srcn, 9);
-	erreur = memcmp(dest, destn, 9);
-	printf("Erreur = %i\n", erreur);
-} */

@@ -6,7 +6,7 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/12 03:08:19 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/17 14:27:05 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/20 14:56:29 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[j] = '\0';
 	return (destlen + srclen);
 }
-
-/*int	main(void)
-{
-	char *c = "Hello";
-	char *e = "World";
-
-	printf("%u", ft_strlcat(c,e,5));
-}*/

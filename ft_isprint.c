@@ -6,7 +6,7 @@
 /*   By: tobesnar <tobesnar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 15:33:40 by tobesnar          #+#    #+#             */
-/*   Updated: 2024/10/19 18:19:43 by tobesnar         ###   ########.fr       */
+/*   Updated: 2024/10/20 14:53:49 by tobesnar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,3 @@ int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
-/*int main()
-{
-	printf("%i\n", ft_isprint('Z'));
-	printf("%i\n", ft_isprint('\n'));
-	return 0;
-}*/
